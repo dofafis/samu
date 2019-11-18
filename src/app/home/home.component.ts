@@ -52,12 +52,14 @@ export class HomeComponent implements OnInit {
   constructor(
     private eref: ElementRef
   ) {
-    document.addEventListener('click', (event: any) => { 
-      if(!this.listOfFilters.nativeElement.contains(event.target) && !this.actions.nativeElement.contains(event.target)) this.activatedFilter['showPossibleFilters'] = false; 
-    });
   }
-
+  
   ngOnInit() {
+    document.addEventListener('click', (event: any) => { 
+      if(this.activatedFilter['showPossibleFilters']) {
+        if(!this.listOfFilters.nativeElement.contains(event.target) && !this.actions.nativeElement.contains(event.target)) this.activatedFilter['showPossibleFilters'] = false; 
+      }  
+    });
   }
 
   disableAllFilters() {
