@@ -1,0 +1,307 @@
+.sidebarTitle {
+    font-size: 10px;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+.sidebarTitle192 {
+    font-size: medium;
+    color: white;
+    align-self: center;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: -5px;
+}
+
+.pi-home {
+    color: white;
+    margin-top: 50px;
+    margin-left: 30%;
+}
+
+.homeContent {
+    margin-left: 80px;
+    background-color: #f2f3f8;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    height: 100%;
+}
+
+:host ::ng-deep .toolbar {
+    border-radius: 0px;
+    border: none;
+    border-top: solid 1px;
+    border-color: lightgray;
+}
+
+.homeButtonDiv {
+    display: inline-block;
+    float: left;
+}
+
+.homeButton {
+    height: 35px;
+    width: 90px;
+    background-color: #f5f6fc;
+    border: none;
+    border-radius: 4px;
+    margin-left: 15px;
+    margin-top: 15px;
+    color: #00c8ff;
+    font-weight: bold;
+    float: left;
+}
+
+.rightToolbarDiv {
+    display: inline-block;
+    float: right;
+    margin-top: 15px;
+}
+
+.searchInputText {
+    background-color: #f5f6fc;
+    border: none;
+    height: 35px;
+    padding-left: 30px;
+}
+
+.pi-search::before {
+    margin-left: -190px; color: lightgray;
+}
+
+.profileDiv {
+    float: right;
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.homeTitle {
+    margin-left: 20px; font-weight: bold; margin-top: 10px;
+}
+
+.filterButtonsDiv {
+    display: inline-block;
+    float: right;
+    margin-top: 3px;
+}
+
+.filterButtonsActive {
+    height: 35px;
+    width: 90px;
+    background-color: #f5f6fc;
+    border: none;
+    border-radius: 4px;
+    margin-left: 15px;
+    color: #5f75e7;
+    font-weight: bold;
+    float: left;
+}
+
+.buttonsActive {
+    height: fit-content;
+    width: fit-content;
+    background-color: #f5f6fc;
+    border: none;
+    border-radius: 4px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: smaller;
+    color: lightgray;
+    float: left;
+    margin-top: 10px;
+}
+
+.buttonsActive > div {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: inline-block;
+    float: left;
+}
+
+.buttonsActive > img {
+    margin-top: 5px;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+}
+.filterButtonsInactive {
+    height: 35px;
+    width: 90px;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 15px;
+    color: gray;
+    font-weight: bold;
+    float: left;
+}
+
+.filterButtonsInactive:hover {
+    height: 35px;
+    width: 90px;
+    background-color: #f5f6fc;
+    border: none;
+    border-radius: 4px;
+    margin-left: 15px;
+    color: #5f75e7;
+    font-weight: bold;
+    float: left;
+}
+
+.listOfFilters {
+    background-color: white;
+    max-width: 30%;
+    right: 15px;
+    border: none;
+    display: inline-block;
+    z-index: 15;
+    position: absolute;
+}
+
+.listOfFilters {
+    background-color: white;
+    max-width: 30%;
+    right: 15px;
+    border: none;
+    display: inline-block;
+    z-index: 15;
+    position: absolute;
+}
+
+.filterItem {
+    background-color: white;
+    border: none;
+    height: 30px;
+    width: 100%;
+    font-weight: bold;
+    padding: 6px 30px 12px 30px;
+    color: gray;
+    font-size: small;
+}
+
+.filterItem:hover {
+    background-color: #f5f6fc;
+    border: none;
+    height: 30px;
+    width: 100%;
+    font-weight: bold;
+    padding: 6px 30px 12px 30px;
+    color: #5f75e7;
+    font-size: small;
+}
+
+.homePageContent {
+    background-color: #eff0f5;
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    z-index: 10;
+}
+
+.ocurrenceList {
+    background-color: white;
+    display: inline-block;
+    float: left;
+    padding: 0px 5px 30px 5px;
+    margin: 30px;
+    width: 30%;
+    border-radius: 3px;
+    overflow-x: scroll;
+}
+
+.ocurrenceList > table {
+    width: 100%;
+    border: none;
+    border-spacing: 0px;
+}
+
+.ocurrenceList > table > th {
+    height: 30px;
+}
+
+.ocurrenceList > table > th,tr,td {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    font-weight: bold;
+    text-align: left;
+    color: gray;
+    padding: 0px 25px 0px 25px;
+    border: none;
+}
+
+.ocurrenceList > table > tr > td {
+    padding: 10px 25px 10px 25px;
+}
+
+.ocurrenceList > table > tr:hover {
+    background-color: #f2f4ff;
+}
+
+.title {
+    padding-left: 20px;
+    font-weight: bold;
+    width: 30%;
+    float: left;
+    border: none;
+}
+
+.title > img {
+    height: 1em;
+}
+
+.numeroCell {
+    font-size: smaller;
+    font-weight: normal;
+    color: #92a2ee;
+}
+
+.statusCell > span {
+    color: white;
+    background-color: #c5c5c5;
+    font-weight: normal;
+    padding: 2.5px 20px 2.5px 20px;
+    border-radius: 10px;
+}
+
+.dataCell {
+    font-weight: normal;
+    font-size: small;
+}
+
+.dataCell > img {
+    height: 1em;
+    margin-left: 10px;
+}
+
+.solicitacaoDiv {
+    background-color: white;
+    display: inline-block;
+    float: left;
+    padding: 0px 5px 30px 5px;
+    margin-top: 30px;
+    width: 60%;
+    border-radius: 3px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+  }

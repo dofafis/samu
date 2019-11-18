@@ -1,0 +1,72 @@
+<p-sidebar 
+    [visible]="true" 
+    [style]="{width:'80px', background: '#28d798'}" 
+    [showCloseIcon]="false" 
+    [dismissible]="false"
+    [modal]="false"
+    [baseZIndex]="-1"
+    >
+    <p class="sidebarTitle">SAMU</p>
+    <p class="sidebarTitle192">192</p>
+    <i class="pi pi-home"></i>
+</p-sidebar>
+
+<div class="homeContent">
+    <p-toolbar styleClass="toolbar" [style]="{background: 'white', height: '6em'}">
+        <div class="homeButtonDiv">
+            <button class="homeButton" type="button">Home</button>
+        </div>
+        <div class="profileDiv">
+            <img style="margin-left: 15px; width: 35x; height: 35px;" src="assets/profile.png">
+        </div>
+        <div class="rightToolbarDiv">
+            <input class="searchInputText" type="text" placeholder="Search..." pInputText>
+            <i class="pi pi-search"></i>
+            <img style="margin-left: 10px; width: 20x; height: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABYUlEQVRIie2UsUoDQRRFz8iyAYXkB6xMUilmIVuEkA8Q7EQbPyBiI2ijnWltU/oTVgG1swmBTYqUMkkVbYWszSYMPJsV1iyLu9HCgLe68+a+e+fNwMCqQ6UVDgaDkojcAyil9qrV6ihN31raABE5AopAMeSp8O0EWuvcdDo9Ac7CAIAR0C4UCrflcnm2dECv19u0LKsD7CZIhpZl7TuO85rkkXhFWutcxHwiIodBEOSDIMgrpQ6AZ6BijOlorXNJPlbShu/7p5/m8/ncqdfrb5Htu263+2Tb9hCohFfYzjQBcAwgIucL5gCEtYuoNlOAiGwDzGazxySNMeYhpDuZA4B1gEaj8Z4kqNVqfkg3lgn4FfwH/NEAz/NaITUpPMxCzxfE/iLP81pKqet054vhxnXdq2ghNsEPzAEuY35pO/v9/hjYCpdj13VLafqyPLKdwH8nQESawAswUUo1MxxsxfEBTcd0GfKqyekAAAAASUVORK5CYII=">
+            <img style="margin-left: 10px; width: 20x; height: 20px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAABfklEQVQ4jcWTPU9UURCGn7mXjS4sSNQEKyiFdnMKO2LlT7DdCCV2BmpLgj8B+Wj5CxQ0G7CY3O5GLKVACi4krOSSYO5L4SE5rEEKC6c558zHkzczZ+Afze4LuHsFPAWqEMLzBwHu3gK2gEvgBPgQQhh19xr4BEwBY0AvhHB9W5clsG1J48ATSQ0wG/0vzeyXpIkY30oVjCT3n2Y2EkJ4myaEEI6Aj1HlTlT4J0DSsZmdxMRpSRtm9grYBxYj6OtwD7JYUJnZSp7nGwBm9tnMdlut1hSwB6wD5Hm+CSy7++kdirtr6D0oy7ID0O/3x9394r782yZW7l67+3RU8KWu66WyLDvtdvs9cABQFMWMu18B1R1AnPMasBD7sQC8ruv6h6T5pmkWAeK5mv6LdAovgMkIPALeDDcMmJV0ljpSwJikx3FU37IsW+92u9+LophpmuYdMCfpkZl1UkD6kXpmNpB0/lttcxhlHwIm6dzMBkAvBfxtF06BZzywC//fbgDRxa+nQSj1eQAAAABJRU5ErkJggg==">
+        </div>
+    </p-toolbar>
+    <p-toolbar styleClass="toolbar" [style]="{background: 'white', height: '4em'}">
+        <div class="homeButtonDiv">
+            <p class="homeTitle">Home</p>
+        </div>
+        <div class="filterButtonsDiv">
+            <button [ngClass]="activatedFilter['Today'] ? 'filterButtonsActive' : 'filterButtonsInactive'" (click)="activateFilter('Today')" type="button">Today</button>
+            <button [ngClass]="activatedFilter['Month'] ? 'filterButtonsActive' : 'filterButtonsInactive'" (click)="activateFilter('Month')" type="button">Month</button>
+            <button [ngClass]="activatedFilter['Year'] ? 'filterButtonsActive' : 'filterButtonsInactive'" (click)="activateFilter('Year')" type="button">Year</button>
+            <button #actions [ngClass]="activatedFilter['showPossibleFilters'] ? 'filterButtonsActive' : 'filterButtonsInactive'" (click)="activateFilter('showPossibleFilters')" type="button">Actions <img style="width: 15px; height: 15px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAzklEQVRIiWNgGAUEACMyJ770+X9qGLqwWxJuLhM1DBzegBGbYELJ86n/GRmySDRr6sJuyRx0Qaxx8IBHIp+B4f8e4s3+v+cht0QBNhmsFhxoYPzzm/l3GAMjwy2CZjMy3PrN/DvsQAPjH+zSeEBc0RM1RmbmEwwMDII4lLz///evxaI+GZwOwZtMF/XJ3Pr/nymMgYEBm+v+/P/PFIbPcIIWMDAwMCzqEd/DwMCAEb7/GRnyoXJ4Ad4gQgbouRw5t+IDNM/JoxaMWjAK6AAAM2I5GR2X+8IAAAAASUVORK5CYII="></button>
+        </div>
+    </p-toolbar>
+    <div *ngIf="activatedFilter['showPossibleFilters']" #listOfFilters class="listOfFilters">
+        <div *ngFor="let filter of filters" (click)="activateFilter(filter)" class="filterItem"> {{filter}} </div>
+    </div>
+    <div class="homePageContent">
+        <div class="ocurrenceList">
+            <p class="title" style="width: 100%;">Lista de ocorrência</p>
+            <hr style="border: 0.5px solid lightgray; display: inline-block; width: 100%;" />
+            <table>
+                <th>Número</th><th>Status</th><th>Data</th>
+                <tr *ngFor="let ocurrence of ocurrenceList">
+                    <td class="numeroCell"> {{ocurrence.numero}} </td>
+                    <td class="statusCell"><span>{{ocurrence.status}}</span></td>
+                    <td class="dataCell"> {{ocurrence.data}} <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAApklEQVRIie3VOwoCQRCE4c8HaGBsZugVvI0n8FYKJt5E8AQmgpmBCK4ogqyBE62zMi4mwhR0MkXXX0zSLXGNMcUEIwzRxyD4BW44YI81FtjW5L2pQBmZeQiKeUUsqFUDKFObJOb9BBDdaTcI+koZkAEZkAEZ8BeA7gev6VVLBlRVPYdJBeq+6BJ5qx75lB2dGsAKJ1xx92r/QC/45zA7bLDEDMdq0BPG9ilZcvXYJQAAAABJRU5ErkJggg=="></td>
+                </tr>
+            </table>
+        </div>
+        <div class="solicitacaoDiv">
+            <p class="title">Solicitação 
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAApklEQVRIie3VOwoCQRCE4c8HaGBsZugVvI0n8FYKJt5E8AQmgpmBCK4ogqyBE62zMi4mwhR0MkXXX0zSLXGNMcUEIwzRxyD4BW44YI81FtjW5L2pQBmZeQiKeUUsqFUDKFObJOb9BBDdaTcI+koZkAEZkAEZ8BeA7gev6VVLBlRVPYdJBeq+6BJ5qx75lB2dGsAKJ1xx92r/QC/45zA7bLDEDMdq0BPG9ilZcvXYJQAAAABJRU5ErkJggg==">
+            </p>
+            <div class="filterButtonsDiv">
+                <button class="buttonsActive" type="button"><div>Trote</div> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAACHElEQVRYhe2WTWsTURSGnzOTtCjiQvADqWhNZxHctLRhdG0Dblz4E5TGlioirhUEwZ1uqpgqdeMvEATBRexOTZO26kaYqBsRrPhRFCRpMsfFJHXhZCaTMq1g3s3cy1zO+9xzDvde6Kmn/10StmA071wSuAgc2KhZacr6yy8RaD7rTIhyY6PGQQoEEGUSQIVc+ezQHCLaSdCxvKPwZ8etuZ+Mdj9GZz9uB4aB2mqVB52aR1VbAEN/juFlaLlywarGYR4IoILdHL2IyzwQAMRukixsDYB6GTBMY/MzMDLzZj8wAHwv5g47mw6QSBpHm8NiXN0fCKBi2ACiEmv62wLgqteAorE2YHsAYRjAlbXS1gBAw/v0p+IG8L0NM/nKNUUvdxLAdTm2OG09b81H7ju7zRorfmv9bkPfDBzalbqKch34EuL/Y+fKh/Uy2ffe7TVrPO0EvKXQ94CfMncqORW9q/CoPGWdBMjcfr9PE/UCShrRV42kjC+dsT6HxQo4iv1l599aKnrTm8kT8A4uNRvzKGmFl4oe78QcQt4DfmqIewVlBzBXnkzdsk1noN6gAGoBS2a9ni2eT4eVbl2RS5DJO58U9qgwBMaaqFsAUsBiMlHLPps48jVKvMglUNgGYKhYou5807xUdfvGo5p3BQA89ED0MTCI6kK9P5F9PX3wWxexoveAWeNcvY9fAqcEKq5hnlg+PbjajXlP/4R+A2AFr3WbTOo7AAAAAElFTkSuQmCC"></button>
+                <button class="buttonsActive" type="button"><div>Regulation</div> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAABPElEQVRIie2Uv0rDUBSHv9MYlICDDoKNwUXndnF18g++gLsWRwVx6UtIQac69AHqA4hgF1eXrkWHQpvgIoUKBWmT46AFG9ImcB37jffc8/sOl3svzElBsmzK13xPIq2gcgAgSiOyKAclt2UsyNd8T0KawGqs1FOLQnDqdmb151IniLSSEA6wIqFcp/WnCsbHkihXPTQXzHSLGgtEacxQPBoLIosy0EsofYBeGQuCkttSiwLIvSh9UfpAHbTon2100/rnpDL9JdfVcj/9XUL2EdkBXMD7rXaALugLOZ78ZfeZYwkzCbZuXhcHjnMuyiWQzzhooELFGQxu3y62v6YKNqvt9ZHYDwiFjMFxmvaCfdQ+WXsfL0xc01HOvjMIBygOw2H170L8HewZhP+gTPxdccGSsSCWYfTZzfkXvgFtgFhh5xWbggAAAABJRU5ErkJggg=="></button>
+                <button class="buttonsActive" type="button"><div>Engano</div> <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzM0OThkYiI+PHBhdGggZD0iTTg2LDE0LjMzMzMzYy0zOS40OTU1MiwwIC03MS42NjY2NywzMi4xNzExNSAtNzEuNjY2NjcsNzEuNjY2NjdjMCwzOS40OTU1MiAzMi4xNzExNSw3MS42NjY2NyA3MS42NjY2Nyw3MS42NjY2N2MzOS40OTU1MiwwIDcxLjY2NjY3LC0zMi4xNzExNSA3MS42NjY2NywtNzEuNjY2NjdjMCwtMzkuNDk1NTIgLTMyLjE3MTE1LC03MS42NjY2NyAtNzEuNjY2NjcsLTcxLjY2NjY3ek04NiwyOC42NjY2N2MzMS43NDkyMSwwIDU3LjMzMzMzLDI1LjU4NDEyIDU3LjMzMzMzLDU3LjMzMzMzYzAsMzEuNzQ5MjEgLTI1LjU4NDEyLDU3LjMzMzMzIC01Ny4zMzMzMyw1Ny4zMzMzM2MtMzEuNzQ5MjEsMCAtNTcuMzMzMzMsLTI1LjU4NDEyIC01Ny4zMzMzMywtNTcuMzMzMzNjMCwtMzEuNzQ5MjEgMjUuNTg0MTIsLTU3LjMzMzMzIDU3LjMzMzMzLC01Ny4zMzMzM3pNNjIuNDAwMzksNTIuMjY2MjhsLTEwLjEzNDExLDEwLjEzNDExbDIzLjU5OTYxLDIzLjU5OTYxbC0yMy41OTk2MSwyMy41OTk2MWwxMC4xMzQxMSwxMC4xMzQxMWwyMy41OTk2MSwtMjMuNTk5NjFsMjMuNTk5NjEsMjMuNTk5NjFsMTAuMTM0MTEsLTEwLjEzNDExbC0yMy41OTk2MSwtMjMuNTk5NjFsMjMuNTk5NjEsLTIzLjU5OTYxbC0xMC4xMzQxMSwtMTAuMTM0MTFsLTIzLjU5OTYxLDIzLjU5OTYxeiI+PC9wYXRoPjwvZz48L2c+PC9zdmc+"></button>
+                <button class="buttonsActive"  type="button"><div>Information</div> <img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzM0OThkYiI+PHBhdGggZD0iTTg2LDYuODhjLTQzLjY1NjAzLDAgLTc5LjEyLDM1LjQ2Mzk3IC03OS4xMiw3OS4xMmMwLDQzLjY1NjAzIDM1LjQ2Mzk3LDc5LjEyIDc5LjEyLDc5LjEyYzQzLjY1NjAzLDAgNzkuMTIsLTM1LjQ2Mzk3IDc5LjEyLC03OS4xMmMwLC00My42NTYwMyAtMzUuNDYzOTcsLTc5LjEyIC03OS4xMiwtNzkuMTJ6TTg2LDEzLjc2YzM5LjkzNzc5LDAgNzIuMjQsMzIuMzAyMjEgNzIuMjQsNzIuMjRjMCwzOS45Mzc3OSAtMzIuMzAyMjEsNzIuMjQgLTcyLjI0LDcyLjI0Yy0zOS45Mzc3OSwwIC03Mi4yNCwtMzIuMzAyMjEgLTcyLjI0LC03Mi4yNGMwLC0zOS45Mzc3OSAzMi4zMDIyMSwtNzIuMjQgNzIuMjQsLTcyLjI0ek04NiwzNy44NGMtNS42OTk1OCwwIC0xMC4zMiw0LjYyMDQyIC0xMC4zMiwxMC4zMmMwLDUuNjk5NTggNC42MjA0MiwxMC4zMiAxMC4zMiwxMC4zMmM1LjY5OTU4LDAgMTAuMzIsLTQuNjIwNDIgMTAuMzIsLTEwLjMyYzAsLTUuNjk5NTggLTQuNjIwNDIsLTEwLjMyIC0xMC4zMiwtMTAuMzJ6TTcyLjI0LDcyLjI0djYuODhoMy40NGgzLjQ0djQ0LjcyaC0zLjQ0aC0zLjQ0djYuODhoMy40NGgzLjQ0aDEzLjc2aDMuNDRoMy40NHYtNi44OGgtMy40NGgtMy40NHYtNTEuNmgtMy40NGgtMTMuNzZ6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="></button>
+            </div>
+            <hr style="border: 0.5px solid lightgray; display: inline-block; width: 100%;" />
+        </div>
+        <div>
+            
+        </div>
+    </div>
+</div>
