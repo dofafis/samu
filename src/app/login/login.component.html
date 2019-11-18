@@ -1,0 +1,27 @@
+<div id="loginPage" class="loginPage">
+    <div id="leftSide" class="leftPage">
+        <div id="loginForm" class="loginForm">
+            <img src="assets/samu-logo.jpeg"/>
+            <h3>Sign In</h3>
+
+            <form [formGroup]="loginForm">
+
+                <input class="inputText" id="usernameInput" type="text" name="username" placeholder="Username" formControlName="username" pInputText/>
+                <span class="validationMessage" *ngIf="!validField('username') && !loginForm.controls.username.pristine">Username must have 5 to 30 characters</span>                
+                
+                <input class="inputText" id="passwordInput" type="password" name="password" placeholder="Password" formControlName="password" pInputText/>
+                <span class="validationMessage" *ngIf="!validField('password') && !loginForm.controls.password.pristine">Username must have 6 to 30 characters</span>                
+
+            </form>
+
+            <div class="footer">
+                <span class="forgotPassword">Forgot Password?</span>
+                <button class="signInButton" (click)="submitLogin()">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="rightSide" class="rightPage">
+        <img class="samuAmbulancesImg" src="assets/samu-ambulances.jpeg"/>
+    </div>
+</div>
